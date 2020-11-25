@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Listado de alumnos</title>
+	<link rel="stylesheet"  href="bulma/css/bulma.min.css">
+	<link rel="stylesheet"  href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- vincular con framework bulma css -->
+</head>
+<body>
+	<!-- Colocar hero banner de bulma -->
+	<div class="block"> 
+		<section class="hero">
+			<div class="hero-body">
+				<div class="container">
+				<b><h1 class="title">Universidad de Colima</h1></b>
+				<b><h2 class="subtitulo">Facultad de Telematica</h2></b>
+			</div>
+			</div>
+		</section>
+	<div class="container is-fullhd has-background-light"> 
+	
+	<!-- Aplicar clases y elementos de bulma para dar acomodo al contenido -->
+	<h1 id="titulo"><b></b></h1>
+	<b><h2 id="subtitulo2"></h2></b>
+	<h3 id="subtitulo3">Profesor: <b><span></span></b></h3>
+	<b><center><p id="textlista"></p></center></b>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#titulo").html('Programacion para Web');
+			$("#subtitulo2").html('Grupo 5to B');
+			$("span").html(' Jose Nabor Ramirez Morfin');
+			$("#textlista").html('Listado de alumnos');
+		});
+	</script>
+	<ol id="lista">
+		<li>AGUILAR VAZQUEZ ANA ISABEL</li>
+		<li>ANDRADE CERVANTES ALANNAH ELIZABETH</li>
+		<li>CHAVEZ AGUIRRE RAUL ANTONIO</li>
+		<li>CHAVEZ MADRIGAL RICARDO</li>
+		<li>COBIAN VILLA KARLA NAYELI</li>
+		<li>ESTUDILLO MENDOZA ANGEL GUSTAVO</li>
+		<li>GUTIERREZ RODRIGUEZ CHRISTIAN ULISES</li>
+		<li>HARO LOZANO JOSE</li>
+		<li>LOPEZ MARTINEZ DAVID ALBERTO</li>
+		<li>MOJICA GALVEZ VICTOR ALBERTO</li>
+		<li>PASTOR MARTINEZ CARLOS ISMAEL</li>
+		<li>RAMIREZ MORFIN MARCELO</li>
+		<li>RAMOS NABOR MARTIN</li>
+		<li>ROBLES ADALID IVAN FERNANDO</li>
+	</ol><br>
+	<div id="datos"></div>
+	<!-- Colocar Footer de bulma -->
+	<footer class="footer">
+	  <div class="content has-text-centered">
+	    <p>
+	      <strong>&copy</strong> Desarrollado por: <a href="#">Victor Mojica </a>
+	    </p>
+	  </div>
+	</footer>
+	<script type="text/javascript">
+		$("#lista li").click(function(){
+			$("#datos").html($(this).text());
+			$("#datos").css("background-color", "#ffa500");
+		});
+
+		$("li:even").css("background-color", "#fffff");
+		$("li:odd").css("background-color", "#00ff00");
+		$("li").hover(function(){
+			$(this).css("color", "blue");
+			}, function(){
+			$(this).css("color", "green");
+		});
+
+	</script>
+	
+</body>
+</html>

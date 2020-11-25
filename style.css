@@ -1,0 +1,20 @@
+.hero-body
+{
+	background: #008000;
+}
+.title {
+	color: white;
+}
+
+.subtitulo{
+	color: white;
+}
+#titulo{
+	font-size: 50px;
+}
+#subtitulo2{
+	font-size: 30px;
+}
+#subtitulo3{
+	font-size: 20px;
+}
